@@ -227,7 +227,7 @@ body {
     font-style: normal;
     font-weight: 400;
     text-align: left;
-    color: #fff;
+    /*color: #fff;*/
     background: #111111;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1802,19 +1802,21 @@ input:focus[type="text"].subscribe-email::-moz-placeholder {
 /* newsletter form */
 
 #subscribe-wrapper {
-    position: fixed;
+    position: relative;
     width: 375px;
     height: auto;
     text-align: center;
-    right: 45px;
-    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*right: 45px;*/
+    /*bottom: 50px;*/
 }
 
 @media only screen and (max-width: 880px) {
     #subscribe-wrapper {
         width: 245px;
-        right: 22px;
-        bottom: 24px;
+        /*right: 22px;*/
+        /*bottom: 24px;*/
     }
     #subscribe input {
         margin: 20px 0 0 0;
@@ -2946,4 +2948,141 @@ source {
 ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: black;
+}
+
+.so-ico{
+    font-size:20px;
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+    color: rgba(24,40,62,1);
+    border: 2px solid white;
+    border-radius: 50%;
+    transition-duration: 0.8s;
+}
+
+.so-ico:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.social-set{
+    margin-top: 25px;
+}
+
+.ascenter {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.mailer {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+}
+.mailer:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: -5px;
+    background: #00ff00;
+    height: 4px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.mailer:hover:after,
+.mailer:focus:after,
+.mailer:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+
+.testimonial{ margin: 0 20px 50px; }
+.testimonial .pic{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 15px 15px 0;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.testimonial .testimonial-profile{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+}
+.testimonial .title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2f2f2f;
+    text-transform: capitalize;
+    margin: 0 0 7px 0;
+}
+.testimonial .post{
+    display: block;
+    font-size: 14px;
+    color: #5d7aa7;
+}
+.testimonial .description{
+    padding: 20px 22px;
+    background: #1f487e;
+    font-size: 15px;
+    color: #fff;
+    line-height: 25px;
+    margin: 0;
+    position: relative;
+}
+.testimonial .description:before,
+.testimonial .description:after{
+    content: "";
+    border-width: 18px 0 0 18px;
+    border-style: solid;
+    border-color: #5d7aa7 transparent transparent;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+.testimonial .description:after{
+    border-width: 18px 18px 0 0;
+    left: auto;
+    right: 0;
+}
+.owl-theme .owl-controls{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    opacity: 0.8;
+    background: #fff;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    font-size: 20px;
+    color: #1f487e;
+}
+.owl-next:before{ content: "\f054"; }
+
+.testi{
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
 }

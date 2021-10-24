@@ -198,7 +198,7 @@ $(function() {
 
 // 11. the wall
 window.addEvent("domready", function() {
-    var maxLengthMSK = 44;
+    var maxLengthMSK = 45;
     var counterMSK = 1;
     var wallMSK = new Wall("wall", {
         "autoposition": false,
